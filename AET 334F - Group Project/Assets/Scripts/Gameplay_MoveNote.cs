@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gameplay_MoveNote : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 4f;
 
     void Update()
     {

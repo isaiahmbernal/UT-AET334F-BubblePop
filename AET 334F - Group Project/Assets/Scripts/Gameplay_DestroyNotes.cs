@@ -6,7 +6,7 @@ public class Gameplay_DestroyNotes : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit");
+        // Debug.Log("Destroyed Note");
         if (other.gameObject.tag == "Note")
             Destroy(other.gameObject);
     }
