@@ -5,96 +5,194 @@ using UnityEngine.UI;
 
 public class Input_Gameplay : MonoBehaviour
 {
+    string myName;
+
+    // Trigger checks for each of the arrows on the screen
     public Input_CheckArrow arrowUp;
     public Input_CheckArrow arrowDown;
     public Input_CheckArrow arrowLeft;
     public Input_CheckArrow arrowRight;
 
+    // Creating the score and health values
     public int score = 0;
     public float health = 5;
 
+    // Creating the sound effects when you hit a note
     public AudioSource pop01;
     public AudioSource pop02;
 
-    public Image testLight;
+    // This is just for testing, checks to see if you hit the note correctly
+    // public Image testLight;
 
+    void Start()
+    {
+        myName = this.gameObject.name;
+    }
+    
+    // Player input checking
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        // If this is the Player 1 input
+        if (myName == "Player 1")
         {
-            if (arrowUp.isTriggeredA == true)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                testLight.color = Color.green;
-                Destroy(arrowUp.bubble);
-                score++;
-                int pickSound = Random.Range(0,2);
-                if (pickSound == 0)
-                    pop01.Play();
-                else if (pickSound == 1)
-                    pop02.Play();
+                if (arrowUp.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowUp.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                    // Debug.Log(health);
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                testLight.color = Color.red;
-                health--;
-                Debug.Log(health);
+                if (arrowDown.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowDown.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (arrowLeft.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowLeft.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                if (arrowRight.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowRight.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+
+        // Case if this is the Player 2 input
+        if ( myName == "Player 2" )
         {
-            if (arrowDown.isTriggeredA == true)
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                testLight.color = Color.green;
-                Destroy(arrowDown.bubble);
-                score++;
-                int pickSound = Random.Range(0,2);
-                if (pickSound == 0)
-                    pop01.Play();
-                else if (pickSound == 1)
-                    pop02.Play();
+                if (arrowUp.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowUp.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                    // Debug.Log(health);
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.S))
             {
-                testLight.color = Color.red;
-                health--;
+                if (arrowDown.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowDown.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            if (arrowLeft.isTriggeredA == true)
+            else if (Input.GetKeyDown(KeyCode.A))
             {
-                testLight.color = Color.green;
-                Destroy(arrowLeft.bubble);
-                score++;
-                int pickSound = Random.Range(0,2);
-                if (pickSound == 0)
-                    pop01.Play();
-                else if (pickSound == 1)
-                    pop02.Play();
+                if (arrowLeft.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowLeft.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.D))
             {
-                testLight.color = Color.red;
-                health--;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (arrowRight.isTriggeredA == true)
-            {
-                testLight.color = Color.green;
-                Destroy(arrowRight.bubble);
-                score++;
-                int pickSound = Random.Range(0,2);
-                if (pickSound == 0)
-                    pop01.Play();
-                else if (pickSound == 1)
-                    pop02.Play();
-            }
-            else
-            {
-                testLight.color = Color.red;
-                health--;
+                if (arrowRight.isTriggeredA == true)
+                {
+                    // testLight.color = Color.green;
+                    Destroy(arrowRight.bubble);
+                    score++;
+                    int pickSound = Random.Range(0,2);
+                    if (pickSound == 0)
+                        pop01.Play();
+                    else if (pickSound == 1)
+                        pop02.Play();
+                }
+                else
+                {
+                    // testLight.color = Color.red;
+                    health--;
+                }
             }
         }
     }
