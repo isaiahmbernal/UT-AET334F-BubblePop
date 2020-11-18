@@ -11,12 +11,14 @@ public class Input_Gameplay : MonoBehaviour
     public Input_CheckArrow arrowRight;
 
     public int score = 0;
-    public float health = 5;
+    public int health = 5;
 
     public AudioSource pop01;
     public AudioSource pop02;
 
     public Image testLight;
+
+    private StatsManager stats;
 
     void Update()
     {
@@ -27,6 +29,8 @@ public class Input_Gameplay : MonoBehaviour
                 testLight.color = Color.green;
                 Destroy(arrowUp.bubble);
                 score++;
+                stats.changeTotalScore(1);
+                stats.changePopTotal(1);
                 int pickSound = Random.Range(0,2);
                 if (pickSound == 0)
                     pop01.Play();
@@ -37,6 +41,7 @@ public class Input_Gameplay : MonoBehaviour
             {
                 testLight.color = Color.red;
                 health--;
+                stats.changeTotalHPLost(1);
                 Debug.Log(health);
             }
         }
@@ -47,6 +52,8 @@ public class Input_Gameplay : MonoBehaviour
                 testLight.color = Color.green;
                 Destroy(arrowDown.bubble);
                 score++;
+                stats.changeTotalScore(1);
+                stats.changePopTotal(1);
                 int pickSound = Random.Range(0,2);
                 if (pickSound == 0)
                     pop01.Play();
@@ -57,6 +64,7 @@ public class Input_Gameplay : MonoBehaviour
             {
                 testLight.color = Color.red;
                 health--;
+                stats.changeTotalHPLost(1);
             }
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -66,6 +74,8 @@ public class Input_Gameplay : MonoBehaviour
                 testLight.color = Color.green;
                 Destroy(arrowLeft.bubble);
                 score++;
+                stats.changeTotalScore(1);
+                stats.changePopTotal(1);
                 int pickSound = Random.Range(0,2);
                 if (pickSound == 0)
                     pop01.Play();
@@ -76,6 +86,7 @@ public class Input_Gameplay : MonoBehaviour
             {
                 testLight.color = Color.red;
                 health--;
+                stats.changeTotalHPLost(1);
             }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -85,6 +96,8 @@ public class Input_Gameplay : MonoBehaviour
                 testLight.color = Color.green;
                 Destroy(arrowRight.bubble);
                 score++;
+                stats.changeTotalScore(1);
+                stats.changePopTotal(1);
                 int pickSound = Random.Range(0,2);
                 if (pickSound == 0)
                     pop01.Play();
@@ -95,7 +108,13 @@ public class Input_Gameplay : MonoBehaviour
             {
                 testLight.color = Color.red;
                 health--;
+                stats.changeTotalHPLost(1);
             }
         }
+    }
+
+    public void ConnectToManager( StatsManager manager )
+    {
+        stats = manager;
     }
 }
