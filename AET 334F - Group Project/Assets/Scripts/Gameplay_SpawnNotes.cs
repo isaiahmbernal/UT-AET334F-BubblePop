@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Gameplay_SpawnNotes : MonoBehaviour
 {
+    // These are used to tell the spawning bubbles where to spawn so they properly spawn underneath the arrows
     [SerializeField] private Transform arrowUpPos;
     [SerializeField] private Transform arrowDownPos;
     [SerializeField] private Transform arrowLeftPos;
     [SerializeField] private Transform arrowRightPos;
     [SerializeField] private GameObject gameplayCanvas;
 
+    // These are the variables for the prefabs in case we have notes that look differently
     public GameObject noteUp;
     public GameObject noteDown;
     public GameObject noteLeft;
     public GameObject noteRight;
 
+    // This is the game object we'll assign to whatever note we spawn
     private GameObject chosenNote;
 
+    // Used to keep the coroutine running
     bool isSpawning = true;
 
     void Start()
@@ -28,7 +32,7 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     {
         while (isSpawning)
         {
-            // Debug.Log ("Courotining");
+            // Debug.Log ("Coroutining");
             int whichNote = Random.Range (0, 4);
             float waitTime = Random.Range (.5f, 1f);
 
