@@ -10,12 +10,12 @@ public class StatsManager : MonoBehaviour
     private int longestStreak;
     private int totalScore;
 
-    private Input_Gameplay component;
+    // private Input_Gameplay component;
 
     // Start is called before the first frame update
     void Start()
     {
-        component.ConnectToManager(this);
+        // component.ConnectToManager(this);
     }
 
     // Update is called once per frame
