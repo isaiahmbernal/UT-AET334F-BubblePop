@@ -17,12 +17,6 @@ public class StatsManager : MonoBehaviour
     {
         // component.ConnectToManager(this);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void changeTotalHPLost( int lostHP )
     {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author : Isaiah Bernal
 public class Gameplay_SpawnNotes : MonoBehaviour
 {
     // These are used to tell the spawning bubbles where to spawn so they properly spawn underneath the arrows
@@ -11,7 +12,7 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     [SerializeField] private Transform arrowRightPos;
     [SerializeField] private GameObject gameplayCanvas;
 
-    // These are the variables for the prefabs in case we have notes that look differently
+    // These are the variables for the prefabs in case we have notes that look different from eachother
     public GameObject noteUp;
     public GameObject noteDown;
     public GameObject noteLeft;
@@ -23,6 +24,10 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     // Used to keep the coroutine running
     bool isSpawning = true;
 
+    // The values for the minimum and maximum time between note spawns
+    private float minSpawnTime = .32f;
+    private float maxSpawnTime = .33f;
+
     void Start()
     {
         StartCoroutine(SpawnNotes());
@@ -33,8 +38,12 @@ public class Gameplay_SpawnNotes : MonoBehaviour
         while (isSpawning)
         {
             // Debug.Log ("Coroutining");
+
+            // Rolling for which note (up, down, left, right) we want to spawn
             int whichNote = Random.Range (0, 4);
-            float waitTime = Random.Range (.5f, 1f);
+
+            // Rolling for the time between the next note spawn
+            float waitTime = Random.Range (minSpawnTime, maxSpawnTime);
 
             switch (whichNote)
             {
