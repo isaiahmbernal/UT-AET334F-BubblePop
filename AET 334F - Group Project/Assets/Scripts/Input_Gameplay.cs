@@ -37,11 +37,16 @@ public class Input_Gameplay : MonoBehaviour
     // Checking player input
     void Update()
     {
+        PlayerInput();
+    }
+
+    void PlayerInput()
+    {
         // Player 1 Input
         if (myName == "Player 1")
         {
             // If Player 1 presses the Up Arrow key
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) && health > 0)
             {
                 // If there is a note within their Up Arrow trigger on screen
                 if (arrowUp.isTriggeredA == true)
@@ -69,7 +74,7 @@ public class Input_Gameplay : MonoBehaviour
 
             }
             // If Player 1 presses the Down Arrow key
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow) && health > 0)
             {
                 // If there is a note within their Down Arrow trigger on screen
                 if (arrowDown.isTriggeredA == true)
@@ -96,7 +101,7 @@ public class Input_Gameplay : MonoBehaviour
                 }
             }
             // If Player 1 presses the Left Arrow key
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && health > 0)
             {
                 // If there is a note within their Left Arrow trigger on screen
                 if (arrowLeft.isTriggeredA == true)
@@ -123,7 +128,7 @@ public class Input_Gameplay : MonoBehaviour
                 }
             }
             // If Player 1 presses the Right Arrow key
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && health > 0)
             {
                 // If there is a note within their Right Arrow trigger on screen
                 if (arrowRight.isTriggeredA == true)
@@ -152,10 +157,10 @@ public class Input_Gameplay : MonoBehaviour
         }
 
         // Player 2 Input
-        if ( myName == "Player 2" )
+        if (myName == "Player 2")
         {
             // If Player 2 presses the W key
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) && health > 0)
             {
                 // If there is a note within their Up Arrow trigger on screen
                 if (arrowUp.isTriggeredA == true)
@@ -182,7 +187,7 @@ public class Input_Gameplay : MonoBehaviour
                 }
             }
             // If Player 2 presses the S key
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) && health > 0)
             {
                 // If there is a note within their Down Arrow trigger on screen
                 if (arrowDown.isTriggeredA == true)
@@ -209,7 +214,7 @@ public class Input_Gameplay : MonoBehaviour
                 }
             }
             // If Player 2 presses the A key
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) && health > 0)
             {
                 // If there is a note within their Left Arrow trigger on screen
                 if (arrowLeft.isTriggeredA == true)
@@ -236,7 +241,7 @@ public class Input_Gameplay : MonoBehaviour
                 }
             }
             // If Player 2 presses the A key
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) && health > 0)
             {
                 // If there is a note within their Right Arrow trigger on screen
                 if (arrowRight.isTriggeredA == true)

@@ -12,6 +12,9 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     [SerializeField] private Transform arrowRightPos;
     [SerializeField] private GameObject gameplayCanvas;
 
+    // Gameplay variable so we can check player health
+    [SerializeField] private Input_Gameplay currentHealth;
+
     // These are the variables for the prefabs in case we have notes that look different from eachother
     public GameObject noteUp;
     public GameObject noteDown;
@@ -25,12 +28,18 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     bool isSpawning = true;
 
     // The values for the minimum and maximum time between note spawns
-    private float minSpawnTime = .32f;
-    private float maxSpawnTime = .33f;
+    private float minSpawnTime = .66f;
+    private float maxSpawnTime = .67f;
 
     void Start()
     {
         StartCoroutine(SpawnNotes());
+    }
+
+    void Update()
+    {
+        if (currentHealth.health < 0)
+            isSpawning = false;
     }
 
     IEnumerator SpawnNotes()
