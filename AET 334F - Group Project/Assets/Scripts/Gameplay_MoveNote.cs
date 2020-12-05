@@ -6,7 +6,7 @@ using UnityEngine;
 public class Gameplay_MoveNote : MonoBehaviour
 {
     // The speed at which notes move across the screen
-    private float speed = 15f;
+    private float speed = 5f;
 
     void Update()
     {

@@ -17,6 +17,10 @@ public class Stats_HiScore : MonoBehaviour
     {
         HiScore1 = PlayerPrefs.GetInt("HiScore1");
         HiScore2 = PlayerPrefs.GetInt("HiScore2");
+        if (HiScore1 == null)
+            HiScore1 = 0;
+        if (HiScore2 == null)
+            HiScore2 = 0;
     }
 
     void Update()
@@ -29,24 +33,24 @@ public class Stats_HiScore : MonoBehaviour
 
     void HiScoreSingle()
     {
-        if ((singlePlayer.health < 0) && (singlePlayer.score > HiScore1))
+        if ((singlePlayer.health <= 0) && (singlePlayer.score > HiScore1))
         {
-            PlayerPrefs.SetInt("HiScore1", singlePlayer.score);
-            HiScore1 = PlayerPrefs.GetInt("HiScore1");
+            HiScore1 = singlePlayer.score;
+            PlayerPrefs.SetInt("HiScore1", HiScore1);
         }
     }
 
     void HiScoreMulti()
     {
-        if ((playerOne.health < 0) && (playerOne.score > HiScore1))
+        if ((playerOne.health <= 0) && (playerOne.score > HiScore1))
         {
-            PlayerPrefs.SetInt("HiScore1", playerOne.score);
-            HiScore1 = PlayerPrefs.GetInt("HiScore1");
+            HiScore1 = playerOne.score;
+            PlayerPrefs.SetInt("HiScore1", HiScore1);
         }
-        if ((playerTwo.health < 0) && (playerTwo.score > HiScore2))
+        if ((playerTwo.health <= 0) && (playerTwo.score > HiScore2))
         {
-            PlayerPrefs.SetInt("HiScore2", playerTwo.score);
-            HiScore2 = PlayerPrefs.GetInt("HiScore2");
+            HiScore2 = playerTwo.score;
+            PlayerPrefs.SetInt("HiScore2", HiScore1);
         }
     }
 }

@@ -29,8 +29,8 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     private bool stop;
 
     // The values for the minimum and maximum time between note spawns
-    private float minSpawnTime = .66f;
-    private float maxSpawnTime = .67f;
+    private float minSpawnTime = .3571f;
+    private float maxSpawnTime = .35714f;
 
     void OnEnable()
     {

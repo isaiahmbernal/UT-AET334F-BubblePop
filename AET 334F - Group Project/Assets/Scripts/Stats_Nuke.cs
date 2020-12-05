@@ -8,6 +8,7 @@ public class Stats_Nuke : MonoBehaviour
 {
     private Button myButton;
     [SerializeField] private AudioSource nukeSound;
+    [SerializeField] private Stats_HiScore hiScore;
 
     void Start()
     {
@@ -17,6 +18,8 @@ public class Stats_Nuke : MonoBehaviour
 
     void ResetStats()
     {
+        hiScore.HiScore1 = 0;
+        hiScore.HiScore2 = 0;
         PlayerPrefs.SetInt("HiScore1", 0);
         PlayerPrefs.SetInt("HiScore2", 0);
         nukeSound.Play();

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2173293787896952210}
   - component: {fileID: 8445754014153270248}
   m_Layer: 5
-  m_Name: Note
+  m_Name: Note (2-Player)
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373.17126, y: -231.30872}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: 209.1, y: -202}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2097084599526009229
 CanvasRenderer:
@@ -101,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75, y: 75}
+  m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
 --- !u!50 &8445754014153270248
 Rigidbody2D:

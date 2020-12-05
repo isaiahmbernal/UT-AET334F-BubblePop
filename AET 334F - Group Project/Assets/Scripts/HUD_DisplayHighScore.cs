@@ -19,8 +19,10 @@ public class HUD_DisplayHighScore : MonoBehaviour
     void Update()
     {
         if (player.name == "Player 1")
-            myText.text = hiScore.HiScore1.ToString();
-        else if (player.name == "Player 2")
-            myText.text = hiScore.HiScore2.ToString();
+            if (myText.text != hiScore.HiScore1.ToString())
+                myText.text = hiScore.HiScore1.ToString();
+        if (player.name == "Player 2")
+            if (myText.text != hiScore.HiScore2.ToString())
+                myText.text = hiScore.HiScore2.ToString();
     }
 }
