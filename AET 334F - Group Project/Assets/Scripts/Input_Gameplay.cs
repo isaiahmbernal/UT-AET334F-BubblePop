@@ -10,20 +10,22 @@ public class Input_Gameplay : MonoBehaviour
     string myName;
 
     // Trigger checks for each of the arrows on the screen
-    public Input_CheckArrow arrowUp;
-    public Input_CheckArrow arrowDown;
-    public Input_CheckArrow arrowLeft;
-    public Input_CheckArrow arrowRight;
+    [SerializeField] private Input_CheckArrow arrowUp;
+    [SerializeField] private Input_CheckArrow arrowDown;
+    [SerializeField] private Input_CheckArrow arrowLeft;
+    [SerializeField] private Input_CheckArrow arrowRight;
 
     // Variables to track the score and health
     public int score = 0;
-    public float health = 5;
+    public float health = 1;
     private float healthGain = .25f;
-    private float maxHealth;
+    [SerializeField] private float maxHealth = 6;
 
     // These are the sound effects for when you hit a note properly
     [SerializeField] private AudioSource pop01;
     [SerializeField] private AudioSource pop02;
+
+    [SerializeField] private Config_Info configInfo;
 
     void Start()
     {
@@ -31,12 +33,20 @@ public class Input_Gameplay : MonoBehaviour
         myName = this.gameObject.name;
 
         // Setting the max health to the health the player started with
-        maxHealth = health;
+        health = maxHealth;
+        score = 0;
     }
     
     // Checking player input
     void Update()
     {
+        if (configInfo.isPlaying == true)
+        {
+            score = 0;
+            health = maxHealth;
+            configInfo.isPlaying = false;
+        }
+
         PlayerInput();
     }
 

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author : Isaiah Bernal
 public class Stats_HiScore : MonoBehaviour
 {
     [SerializeField] private Input_Gameplay singlePlayer;
     [SerializeField] private Input_Gameplay playerOne;
     [SerializeField] private Input_Gameplay playerTwo;
-    [SerializeField] private Config_Multi multiConfig;
+    [SerializeField] private Config_Info configInfo;
 
     public int HiScore1;
     public int HiScore2;
@@ -20,7 +21,7 @@ public class Stats_HiScore : MonoBehaviour
 
     void Update()
     {
-        if (multiConfig.isMulti == false)
+        if (configInfo.isMulti == false)
             HiScoreSingle();
         else
             HiScoreMulti();

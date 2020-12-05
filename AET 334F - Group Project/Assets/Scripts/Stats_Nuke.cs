@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author : Isaiah Bernal
 public class Stats_Nuke : MonoBehaviour
 {
     [SerializeField] private bool nukeStats;

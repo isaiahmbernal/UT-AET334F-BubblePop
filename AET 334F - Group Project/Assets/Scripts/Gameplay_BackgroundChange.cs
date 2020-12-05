@@ -9,6 +9,7 @@ public class Gameplay_BackgroundChange : MonoBehaviour
     // Gameplay variable so we can check the score, as well as a background that we can change the color of
     [SerializeField] private Input_Gameplay gameplay;
     private Image background;
+    private float startingDim = .2f;
 
     void Start()
     {
@@ -17,6 +18,6 @@ public class Gameplay_BackgroundChange : MonoBehaviour
     void Update()
     {
         // Essentially, the background's brightness will be 100th of what the player's score is
-        background.color = new Color(gameplay.score/100f, gameplay.score/100f, gameplay.score/100f);
+        background.color = new Color(gameplay.score/110f + startingDim, gameplay.score/110f + startingDim, gameplay.score/110f + startingDim);
     }
 }

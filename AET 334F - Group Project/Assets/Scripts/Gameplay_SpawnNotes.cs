@@ -26,6 +26,7 @@ public class Gameplay_SpawnNotes : MonoBehaviour
 
     // Used to keep the coroutine running
     bool isSpawning = true;
+    private bool stop;
 
     // The values for the minimum and maximum time between note spawns
     private float minSpawnTime = .66f;
@@ -33,13 +34,21 @@ public class Gameplay_SpawnNotes : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnNotes());
+        stop = false;
     }
 
     void Update()
     {
-        if (currentHealth.health < 0)
-            isSpawning = false;
+        if ((currentHealth.health > 0) && (stop == false))
+        {
+            StartCoroutine("SpawnNotes");
+            stop = true;
+        }
+        if ((currentHealth.health <= 0) && (stop == true))
+        {
+            StopCoroutine("SpawnNotes");
+            stop = false;
+        }
     }
 
     IEnumerator SpawnNotes()
