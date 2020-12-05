@@ -31,8 +31,10 @@ public class Input_Gameplay : MonoBehaviour
     {
         // Assigning the player name
         myName = this.gameObject.name;
+    }
 
-        // Setting the max health to the health the player started with
+    void OnEnable()
+    {
         health = maxHealth;
         score = 0;
     }
@@ -40,13 +42,6 @@ public class Input_Gameplay : MonoBehaviour
     // Checking player input
     void Update()
     {
-        if (configInfo.isPlaying == true)
-        {
-            score = 0;
-            health = maxHealth;
-            configInfo.isPlaying = false;
-        }
-
         PlayerInput();
     }
 

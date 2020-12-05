@@ -1,23 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Author : Isaiah Bernal
 public class Stats_Nuke : MonoBehaviour
 {
-    [SerializeField] private bool nukeStats;
+    private Button myButton;
+    [SerializeField] private AudioSource nukeSound;
 
     void Start()
     {
-        nukeStats = false;
+        myButton = GetComponent<Button>();
+        myButton.onClick.AddListener(ResetStats);
     }
 
-    void Update()
+    void ResetStats()
     {
-        if (nukeStats == true)
-        {
-            PlayerPrefs.SetInt("HiScore1", 0);
-            PlayerPrefs.SetInt("HiScore2", 0);
-        }
+        PlayerPrefs.SetInt("HiScore1", 0);
+        PlayerPrefs.SetInt("HiScore2", 0);
+        nukeSound.Play();
     }
 }

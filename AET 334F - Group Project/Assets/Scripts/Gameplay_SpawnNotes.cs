@@ -32,23 +32,15 @@ public class Gameplay_SpawnNotes : MonoBehaviour
     private float minSpawnTime = .66f;
     private float maxSpawnTime = .67f;
 
-    void Start()
+    void OnEnable()
     {
-        stop = false;
+        StartCoroutine("SpawnNotes");
     }
 
     void Update()
     {
-        if ((currentHealth.health > 0) && (stop == false))
-        {
-            StartCoroutine("SpawnNotes");
-            stop = true;
-        }
-        if ((currentHealth.health <= 0) && (stop == true))
-        {
+        if (currentHealth.health <= 0)
             StopCoroutine("SpawnNotes");
-            stop = false;
-        }
     }
 
     IEnumerator SpawnNotes()
