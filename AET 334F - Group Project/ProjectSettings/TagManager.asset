@@ -5,8 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Note
+<<<<<<< Updated upstream
   - MultiplayerP1
   - MultiplayerP2
+=======
+  - NPC
+  - DialogueManager
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
