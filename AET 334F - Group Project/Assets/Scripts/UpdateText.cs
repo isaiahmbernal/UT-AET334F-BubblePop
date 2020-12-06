@@ -12,9 +12,9 @@ public class UpdateText : MonoBehaviour
     private void Start()
     {
         dialogueText.Add("Hello! Welcome to Bubble Pop!");
-        dialogueText.Add("Pop bubbles by matching the beats using the arrow keys when the bubbles pass the arrows on the screen");
-        dialogueText.Add("Be careful, miss too many and you will lose.");
-        dialogueText.Add("Ready? Continue to start");
+        dialogueText.Add("Pop bubbles by using the arrow keys to hit beats when the bubbles pass the arrows at the top of the screen");
+        dialogueText.Add("Be careful, miss too many bubbles and you will lose.");
+        dialogueText.Add("Ready? Hit Play to choose a song!");
 
         Display();
 
@@ -34,10 +34,13 @@ public class UpdateText : MonoBehaviour
 
         if (index >= dialogueText.Count)
         {
-            index = dialogueText.Count - 1;
+            dialogueTextbox.text = dialogueText[dialogueText.Count - 1];
         }
+        else
+        {
+            Display();
 
-        Display();
+        }
 
     }
 
