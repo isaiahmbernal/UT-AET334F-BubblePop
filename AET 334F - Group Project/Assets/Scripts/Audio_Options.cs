@@ -10,9 +10,12 @@ public class Audio_Options : MonoBehaviour
 {
     //get the Sliders and Audio Sources
     public Slider MusicSlider;
-    public AudioSource Music;
+    public AudioSource song1;
+    public AudioSource song2;
     public Slider SfxSlider;
-    public AudioSource Sfx;
+    public AudioSource sfx1;
+    public AudioSource sfx2;
+    public AudioSource sfx3;
 
     //float Mvolume;
 
@@ -21,10 +24,16 @@ public class Audio_Options : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         //get previous PlayerPref values
-        Music.volume = PlayerPrefs.GetFloat("current volume", Music.volume);
-        Sfx.volume = PlayerPrefs.GetFloat("current SFX volume", Sfx.volume);
-        MusicSlider.value = Music.volume;
-        SfxSlider.value = Sfx.volume;
+        song1.volume = PlayerPrefs.GetFloat("current volume", song1.volume);
+        song2.volume = PlayerPrefs.GetFloat("current volume", song2.volume);
+        sfx1.volume = PlayerPrefs.GetFloat("current SFX volume", sfx1.volume);
+        sfx2.volume = PlayerPrefs.GetFloat("current SFX volume", sfx2.volume);
+        sfx3.volume = PlayerPrefs.GetFloat("current SFX volume", sfx3.volume);
+        MusicSlider.value = song1.volume;
+        MusicSlider.value = song2.volume;
+        SfxSlider.value = sfx1.volume;
+        SfxSlider.value = sfx2.volume;
+        SfxSlider.value = sfx3.volume;
     }
 
 
@@ -32,8 +41,11 @@ public class Audio_Options : MonoBehaviour
     void Update()
     {
         //set volume levels equal to sliders
-        Music.volume = MusicSlider.value;
-        Sfx.volume = SfxSlider.value;
+        song1.volume = MusicSlider.value;
+        song2.volume = MusicSlider.value;
+        sfx1.volume = SfxSlider.value;
+        sfx2.volume = SfxSlider.value;
+        sfx3.volume = SfxSlider.value;
         //Default();
 
     }
@@ -41,8 +53,11 @@ public class Audio_Options : MonoBehaviour
     public void SaveSettings()
     {
         //save player prefs of volumes. use button
-        PlayerPrefs.SetFloat("current volume", Music.volume);
-        PlayerPrefs.SetFloat("current SFX volume", Sfx.volume);
+        PlayerPrefs.SetFloat("current volume", song1.volume);
+        PlayerPrefs.SetFloat("current volume", song2.volume);
+        PlayerPrefs.SetFloat("current SFX volume", sfx1.volume);
+        PlayerPrefs.SetFloat("current SFX volume", sfx2.volume);
+        PlayerPrefs.SetFloat("current SFX volume", sfx3.volume);
 
         Debug.Log("save");
         PlayerPrefs.Save();
@@ -53,12 +68,16 @@ public class Audio_Options : MonoBehaviour
         //reset volume settings to 50% . For button.
         Debug.Log("SET TO DEFAULT");
 
-        Sfx.volume= 0.5f;
-        SfxSlider.value = 0.5f;
-        Sfx.volume = SfxSlider.value;
+        sfx1.volume = 0.5f;
+        SfxSlider.value = sfx1.volume;
+        sfx2.volume = 0.5f;
+        SfxSlider.value = sfx2.volume;
+        sfx3.volume = 0.5f;
+        SfxSlider.value = sfx3.volume;
 
-        Music.volume = 0.5f;
-        MusicSlider.value = 0.5f;
-        Music.volume = MusicSlider.value;
+        song1.volume = 0.5f;
+        song2.volume = 0.5f;
+        MusicSlider.value = song1.volume;
+        MusicSlider.value = song2.volume;
     }
 }
