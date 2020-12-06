@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: canvasToLoad
       value: 
       objectReference: {fileID: 845002767}
+    - target: {fileID: 2071799664913654625, guid: df405b47792d6264eb21910700b2a21c, type: 3}
+      propertyPath: configInfo
+      value: 
+      objectReference: {fileID: 89323611}
     - target: {fileID: 2322288850932000417, guid: df405b47792d6264eb21910700b2a21c, type: 3}
       propertyPath: configAwake
       value: 
@@ -351,6 +355,10 @@ PrefabInstance:
       propertyPath: pop02
       value: 
       objectReference: {fileID: 1873871175}
+    - target: {fileID: 3015150234448356887, guid: df405b47792d6264eb21910700b2a21c, type: 3}
+      propertyPath: configInfo
+      value: 
+      objectReference: {fileID: 89323611}
     - target: {fileID: 3305627195512313648, guid: df405b47792d6264eb21910700b2a21c, type: 3}
       propertyPath: m_UiScaleMode
       value: 0
