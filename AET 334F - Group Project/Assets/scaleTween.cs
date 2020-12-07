@@ -11,7 +11,7 @@ public class scaleTween : MonoBehaviour
     private void Start()
     {
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0);
-        LeanTween.scale(gameObject, new Vector3(0.6493062f, 0.6493062f, 0.6493062f), 0.9f);
+        LeanTween.scale(gameObject, new Vector3(0.90f, 0.90f, 0.90f), 2f).setEaseInBounce();
     }
     public void OnClose()
     {
