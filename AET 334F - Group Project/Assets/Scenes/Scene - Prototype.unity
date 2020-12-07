@@ -1133,6 +1133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4af85c829020be049b8be04fbf7cdbf9, type: 3}
+--- !u!82 &975652198 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1520489799965937763, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
+  m_PrefabInstance: {fileID: 2049607777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &985873489 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 530554124484076860, guid: 035aaec2652ad43e795f45d24e367db1, type: 3}
@@ -2198,6 +2203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1928806784 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1517666922068114671, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
+  m_PrefabInstance: {fileID: 2049607777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1941654658 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8252484871401399976, guid: 035aaec2652ad43e795f45d24e367db1, type: 3}
@@ -2315,6 +2325,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1517666922068114671, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520489799965937763, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1852694673033142465, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 403.5
@@ -2502,11 +2520,11 @@ PrefabInstance:
     - target: {fileID: 8817734500426110809, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
       propertyPath: enterScene
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 975652198}
     - target: {fileID: 8817734500426110809, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
       propertyPath: continuesound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1928806784}
     - target: {fileID: 8817734500426110815, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
       propertyPath: m_IsActive
       value: 1
