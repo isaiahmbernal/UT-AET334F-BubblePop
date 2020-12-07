@@ -15,6 +15,7 @@ public class UI_ObjectToggle : MonoBehaviour
         myButton.onClick.AddListener(Toggle);
     }
 
+    // Depending on whether the assigned game object is on or off, set it to the opposite of what it was
     void Toggle()
     {
         if (objectToToggle.active == true)

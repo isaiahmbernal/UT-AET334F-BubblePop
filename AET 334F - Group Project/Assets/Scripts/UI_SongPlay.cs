@@ -15,6 +15,7 @@ public class UI_SongPlay : MonoBehaviour
         myButton.onClick.AddListener(PlaySong);
     }
 
+    // Turn on the parent game object for all music and play the assigned song
     void PlaySong()
     {
         musicObject.SetActive(true);

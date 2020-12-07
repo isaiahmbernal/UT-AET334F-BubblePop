@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author : Mark Salinas
 public class StatsManager : MonoBehaviour
 {
     // variables to keep track of changing in-game stats

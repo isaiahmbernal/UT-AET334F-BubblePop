@@ -55,6 +55,7 @@ public class Gameplay_SpawnNotes : MonoBehaviour
             // Rolling for the time between the next note spawn
             float waitTime = Random.Range (minSpawnTime, maxSpawnTime);
 
+            // Telling which roll to spawn where
             switch (whichNote)
             {
                 case (0):
@@ -74,6 +75,7 @@ public class Gameplay_SpawnNotes : MonoBehaviour
                     chosenNote.transform.position = new Vector2 (arrowRightPos.transform.position.x, arrowRightPos.transform.position.y - 1000);
                     break;
             }
+            // Creating the note
             GameObject spawnedNote = Instantiate (chosenNote, chosenNote.transform.position, chosenNote.transform.rotation);
             spawnedNote.transform.SetParent(gameplayCanvas.transform);
             spawnedNote.AddComponent<Gameplay_MoveNote>();

@@ -16,6 +16,7 @@ public class UI_ObjectEnable : MonoBehaviour
         myButton.onClick.AddListener(Enable);
     }
 
+    // Turns on the assigned game object
     void Enable()
     {
         objectToEnable.SetActive(true);

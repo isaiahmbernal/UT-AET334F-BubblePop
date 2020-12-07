@@ -16,6 +16,7 @@ public class UI_ObjectDisable : MonoBehaviour
         myButton.onClick.AddListener(Disable);
     }
 
+    // Turns off the assigned game object
     void Disable()
     {
         objectToDisable.SetActive(false);

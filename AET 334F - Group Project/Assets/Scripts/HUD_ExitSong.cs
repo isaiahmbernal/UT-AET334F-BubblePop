@@ -13,6 +13,7 @@ public class HUD_ExitSong : MonoBehaviour
 
     [SerializeField] private GameObject exitSong;
 
+    // If all players health is below zero, show the quit button and allow them to exit the song
     void Update()
     {
         if (configInfo.isMulti == false)

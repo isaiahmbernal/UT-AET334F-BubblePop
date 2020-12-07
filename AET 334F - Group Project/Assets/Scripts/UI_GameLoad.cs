@@ -8,6 +8,7 @@ public class UI_GameLoad : MonoBehaviour
 {
     private Button myButton;
 
+    // Variables to load either singleplayer or multiplayer
     [SerializeField] private GameObject singleplayer;
     [SerializeField] private GameObject multiplayer;
     [SerializeField] private Config_Info configInfo;
@@ -18,6 +19,7 @@ public class UI_GameLoad : MonoBehaviour
         myButton.onClick.AddListener(Load);
     }
 
+    // Depending on whether multiplayer is toggled on or not, launch either singleplayer or multiplayer
     void Load()
     {
         if (configInfo.isMulti == false)

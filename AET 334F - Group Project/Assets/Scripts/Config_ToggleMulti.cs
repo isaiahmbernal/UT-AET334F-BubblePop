@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Author: Isaiah Bernal
 public class Config_ToggleMulti : MonoBehaviour
 {
     [SerializeField] private Config_Info configInfo;
@@ -14,6 +15,7 @@ public class Config_ToggleMulti : MonoBehaviour
         myButton.onClick.AddListener(ToggleMulti);
     }
 
+    // If the button is pressed, the multiplayer config option is toggled, either on or off
     void ToggleMulti()
     {
         if (configInfo.isMulti == false)

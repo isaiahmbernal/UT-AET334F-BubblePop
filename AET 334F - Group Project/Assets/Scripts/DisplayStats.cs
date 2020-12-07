@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Author : Mark Salinas
 public class DisplayStats : MonoBehaviour
 {
     // The stats panel that will display the overall stats

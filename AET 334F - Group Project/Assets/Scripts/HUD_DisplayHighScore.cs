@@ -16,6 +16,7 @@ public class HUD_DisplayHighScore : MonoBehaviour
         myText = GetComponent<Text>();
     }
 
+    // Depending on which player, if the text isn't the same as the hi-score being tracked, change it
     void Update()
     {
         if (player.name == "Player 1")

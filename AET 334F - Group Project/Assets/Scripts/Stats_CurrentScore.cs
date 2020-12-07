@@ -14,6 +14,7 @@ public class Stats_CurrentScore : MonoBehaviour
     public int score1;
     public int score2;
 
+    // Keeping track of the current scores, and only updating them if the player's health goes below zero
     void Update()
     {
         if ((configInfo.isMulti == false) && (singleplayer.health <= 0) && (score1 != singleplayer.score))

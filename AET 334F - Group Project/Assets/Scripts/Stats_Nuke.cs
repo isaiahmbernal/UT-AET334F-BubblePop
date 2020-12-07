@@ -16,6 +16,7 @@ public class Stats_Nuke : MonoBehaviour
         myButton.onClick.AddListener(ResetStats);
     }
 
+    // Sets hi-scores to zero
     void ResetStats()
     {
         hiScore.HiScore1 = 0;

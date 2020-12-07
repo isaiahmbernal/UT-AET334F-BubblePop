@@ -15,6 +15,7 @@ public class HUD_DisplayScore : MonoBehaviour
         myText = GetComponent<Text>();
     }
 
+    // Depending on which player, if the text isn't the same as the score being tracked, change it
     void Update()
     {
         if (player.name == "Player 1")

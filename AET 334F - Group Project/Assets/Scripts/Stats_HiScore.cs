@@ -5,6 +5,7 @@ using UnityEngine;
 // Author : Isaiah Bernal
 public class Stats_HiScore : MonoBehaviour
 {
+    // Variables to check the player(s) scores and whether or not multiplayer is toggled
     [SerializeField] private Input_Gameplay singlePlayer;
     [SerializeField] private Input_Gameplay playerOne;
     [SerializeField] private Input_Gameplay playerTwo;
@@ -23,6 +24,7 @@ public class Stats_HiScore : MonoBehaviour
             HiScore2 = 0;
     }
 
+    // Depending on whether multiplayer or not, run either method
     void Update()
     {
         if (configInfo.isMulti == false)
@@ -31,6 +33,7 @@ public class Stats_HiScore : MonoBehaviour
             HiScoreMulti();
     }
 
+    // If the player is dead and their score is greater than the current high score, save their score as the Hi-Score
     void HiScoreSingle()
     {
         if ((singlePlayer.health <= 0) && (singlePlayer.score > HiScore1))
@@ -40,6 +43,7 @@ public class Stats_HiScore : MonoBehaviour
         }
     }
 
+    // Same as HiScoreSingle but for multiplayer
     void HiScoreMulti()
     {
         if ((playerOne.health <= 0) && (playerOne.score > HiScore1))
