@@ -2399,6 +2399,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 65.2135
       objectReference: {fileID: 0}
+    - target: {fileID: 8817734499620234706, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
+      propertyPath: m_Text
+      value: Hello! Welcome to Bubble pop!
+      objectReference: {fileID: 0}
     - target: {fileID: 8817734499957431875, guid: a8b3b43ab0aef462c9c4ab4f0e97948f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
