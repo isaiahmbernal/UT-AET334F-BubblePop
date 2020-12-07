@@ -47,7 +47,7 @@ public class detectParentTween : MonoBehaviour
             thisX = parentX;
         } else if (thisX > parentX)
         {
-            parentX += 1.01f;
+            parentX += 2.01f;
         }
         else
         {
@@ -63,7 +63,7 @@ public class detectParentTween : MonoBehaviour
             thisX = parentX;
         } else if(thisX < parentX)
         {
-            parentX -= 1.01f;
+            parentX -= 2.01f;
         }
         else
         {
