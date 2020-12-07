@@ -759,6 +759,10 @@ PrefabInstance:
       propertyPath: hiScore
       value: 
       objectReference: {fileID: 1171220485}
+    - target: {fileID: 3498925172239895666, guid: cd1f51a726f83e541b159b151e881d42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4005849677175674459, guid: cd1f51a726f83e541b159b151e881d42, type: 3}
       propertyPath: hiScore
       value: 
@@ -771,6 +775,10 @@ PrefabInstance:
       propertyPath: objectToEnable
       value: 
       objectReference: {fileID: 1078386202}
+    - target: {fileID: 4543156461084391504, guid: cd1f51a726f83e541b159b151e881d42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6528744738557047306, guid: cd1f51a726f83e541b159b151e881d42, type: 3}
       propertyPath: score
       value: 
@@ -2167,6 +2175,10 @@ PrefabInstance:
       propertyPath: canvasToClose
       value: 
       objectReference: {fileID: 1691660069}
+    - target: {fileID: 3498925172239895666, guid: 8edfbba486a58454aa08ace2c4c6355d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4231620034700321223, guid: 8edfbba486a58454aa08ace2c4c6355d, type: 3}
       propertyPath: score
       value: 
@@ -2183,6 +2195,10 @@ PrefabInstance:
       propertyPath: objectToEnable
       value: 
       objectReference: {fileID: 1078386202}
+    - target: {fileID: 4543156461084391504, guid: 8edfbba486a58454aa08ace2c4c6355d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5668506029078010721, guid: 8edfbba486a58454aa08ace2c4c6355d, type: 3}
       propertyPath: canvasToClose
       value: 
