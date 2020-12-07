@@ -12,6 +12,8 @@ public class UpdateText : MonoBehaviour
     public List<string> dialogueText = new List<string>();
     public int index = 0;
     public Text dialogueTextbox;
+    public AudioSource continuesound;
+    public AudioSource enterScene; 
 
     private void Start()
     {
@@ -22,7 +24,9 @@ public class UpdateText : MonoBehaviour
         dialogueText.Add("Ready? Hit Play to choose a song!");
 
         // call display function
+        enterScene.Play();
         Display();
+
 
     }
 
@@ -32,6 +36,7 @@ public class UpdateText : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             LoadNextLine();
+            continuesound.Play();
         }
     }
 
