@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Author : Isaiah Bernal
 public class UI_SongPlay : MonoBehaviour
 {
     private Button myButton;
